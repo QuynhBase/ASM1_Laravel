@@ -19,7 +19,7 @@ return new class extends Migration
             $table->float('price');
             $table->foreignIdFor(Category::class)->constrained();
             $table->string('description');
-            $table->integer('quantity');
+            $table->integer('quantity')->default();
             $table->timestamps();
         });
     }

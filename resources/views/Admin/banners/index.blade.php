@@ -3,7 +3,7 @@
 @section('content')
 <div class="row mb-9 align-items-center justify-content-between">
     <div class="col-md-6 mb-8 mb-md-0">
-    <h2 class="fs-4 mb-0">Danh sách sản phẩm</h2>
+    <h2 class="fs-4 mb-0">Danh sách banner</h2>
     <p>Lorem ipsum dolor sit amet.</p>
     </div>
     <div class="col-md-6 d-flex flex-wrap justify-content-md-end">
@@ -13,7 +13,7 @@
     <a href="#" class="btn btn-outline-primary btn-hover-bg-primary me-4">
     Import
     </a> --}}
-    <a href="{{route('admin.products.create')}}" class="btn btn-primary">
+    <a href="{{route('admin.banners.create')}}" class="btn btn-primary">
     Thêm mới
     </a>
     </div>
@@ -78,28 +78,27 @@
     <td>
     <div class="d-flex align-items-center flex-nowrap">
     <a href="../shop/product-details-v1.html" title="Flowers cotton dress">
-    <img src="{{Storage::url($item->image)}}" data-src="" alt="Flowers cotton dress" class="lazy-image" width="60px" height="80px">
+    <img src="{{Storage::url($item->image_path)}}" data-src="" alt="Flowers cotton dress" class="lazy-image" width="60px" height="80px">
     </a>
 
     <a href="../shop/product-details-v1.html" title="Flowers cotton dress" class="ms-6">
-    <p class="fw-semibold text-body-emphasis mb-0">{{$item->name}}</p>
+    <p class="fw-semibold text-body-emphasis mb-0">{{$item->title}}</p>
     </a>
     </div>
     </td>
 
-    <td>{{$item->price}}</td>
-
-    <td>{{$item->category->name}}</td>
-
     <td style="width: 20%;">{{$item->description}}</td>
 
-    {{-- <td>{{$item->quantity}}</td> --}}
+    <td>{{$item->start_date}}</td>
+
+    <td>{{$item->end_date}}</td>
+
 
     <td class="text-center">
     <div class="d-flex flex-nowrap justify-content-center">
-    <a href="{{route('admin.products.show', $item)}}" class="btn btn-primary py-4 px-5 btn-xs fs-13px me-4"><i class="far fa-pen me-2"></i> Xem</a>
-    <a href="{{route('admin.products.edit', $item)}}" class="btn btn-primary py-4 px-5 btn-xs fs-13px me-4"><i class="far fa-pen me-2"></i> Sửa</a>
-    <form action="{{route('admin.products.destroy', $item)}}" method="POST" enctype="multipart/form-data">
+    <a href="{{route('admin.banners.show', $item)}}" class="btn btn-primary py-4 px-5 btn-xs fs-13px me-4"><i class="far fa-pen me-2"></i> Xem</a>
+    <a href="{{route('admin.banners.edit', $item)}}" class="btn btn-primary py-4 px-5 btn-xs fs-13px me-4"><i class="far fa-pen me-2"></i> Sửa</a>
+    <form action="{{route('admin.banners.destroy', $item)}}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('DELETE')
     <button type="submit" onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm này không?')" class="btn btn-outline-primary btn-hover-bg-danger btn-hover-border-danger btn-hover-text-light py-4 px-5 fs-13px btn-xs me-4"><i class="far fa-trash me-2"></i>Xóa</button>

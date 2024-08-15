@@ -3227,7 +3227,7 @@
                 </div>
                 <div class="icons-actions col-xl-3 d-flex justify-content-end fs-28px text-body-emphasis">
                     <div class="px-5 d-none d-xl-inline-block">
-                        <a class="lh-1 color-inherit text-decoration-none" href="#" data-bs-toggle="modal"
+                        <a class="lh-1 color-inherit text-decoration-none" href="#11111" data-bs-toggle="modal"
                             data-bs-target="#signInModal">
                             <svg class="icon icon-user-light">
                                 <use xlink:href="#icon-user-light"></use>
@@ -3400,7 +3400,10 @@
                 title="View shopping cart">View shopping cart</a>
         </div>
     </div>
-    <div class="modal" id="signInModal" tabindex="-1" aria-labelledby="signInModal" aria-hidden="true">
+
+
+   
+    {{-- <div class="modal" id="signInModal" tabindex="-1" aria-labelledby="signInModal" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header text-center border-0 pb-0">
@@ -3446,8 +3449,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="modal" id="signUpModal" tabindex="-1" aria-labelledby="signUpModal" aria-hidden="true">
+    </div>  --}}
+    {{-- <div class="modal" id="signUpModal" tabindex="-1" aria-labelledby="signUpModal" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header text-center border-0 pb-0">
@@ -3496,7 +3499,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
+
+
+
+
     <div class="modal fade" id="quickViewModal" aria-labelledby="quickViewModal" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">

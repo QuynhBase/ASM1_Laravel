@@ -42,7 +42,6 @@
             <div style="width: 60px; height: 80px;">
                 <img src="{{Storage::url($product->image)}}" style="max-width: 60px; max-height: 80px;"  alt="">
             </div>
-            
         @endif
     </div>
 
@@ -101,7 +100,7 @@
 
     <hr class="mb-7 mt-0">
 
-    <div class="row">
+    {{-- <div class="row">
     <div class="col-md-3">
     <h6 class="fs-6 fw-500">5. Số lượng</h6>
     </div>
@@ -111,7 +110,7 @@
     <input type="text" placeholder="Nhập số lượng" class="form-control" id="cost" name="quantity" value="{{$product->quantity}}">
     </div>
     </div>
-    </div>
+    </div> --}}
 
     </form>
     </div>

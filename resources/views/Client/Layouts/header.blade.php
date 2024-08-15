@@ -40,8 +40,8 @@
             <div class="w-50 d-none d-lg-block">
                 <div class="d-flex align-items-center justify-content-end">
                     <div class="dropdown me-10">
-                        <span class="d-inline-block me-3"><img
-                                src="{{ asset('theme/assets/images/header/flag.html') }}" alt></span>
+                        <span class="d-inline-block me-3"><img src="{{ asset('theme/assets/images/header/flag.html') }}"
+                                alt></span>
                         <button
                             class="btn btn-link dropdown-toggle fw-semibold text-uppercase ls-1 p-0 dropdown-menu-end fs-13px"
                             type="button" data-bs-toggle="dropdown" aria-expanded="false">English
@@ -74,8 +74,7 @@
             <div class="container-xxl container">
                 <div class="d-flex d-xl-none w-100">
                     <div class="w-72px d-flex d-xl-none">
-                        <button
-                            class="navbar-toggler align-self-center  border-0 shadow-none px-0 canvas-toggle p-4"
+                        <button class="navbar-toggler align-self-center  border-0 shadow-none px-0 canvas-toggle p-4"
                             type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasNavBar"
                             aria-controls="offCanvasNavBar" aria-expanded="false" aria-label="Toggle Navigation">
                             <span class="fs-24 toggle-icon"></span>
@@ -85,15 +84,13 @@
                         <a href="index.html" class="navbar-brand px-8 py-4 mx-auto">
                             <img class="light-mode-img" src="{{ asset('theme/assets/images/others/logo.png') }}"
                                 width="179" height="26" alt="Glowing - Bootstrap 5 HTML Templates">
-                            <img class="dark-mode-img"
-                                src="{{ asset('theme/assets/images/others/logo-white.png') }}" width="179"
-                                height="26" alt="Glowing - Bootstrap 5 HTML Templates"></a>
+                            <img class="dark-mode-img" src="{{ asset('theme/assets/images/others/logo-white.png') }}"
+                                width="179" height="26" alt="Glowing - Bootstrap 5 HTML Templates"></a>
                     </div>
                     <div class="icons-actions d-flex justify-content-end w-xl-50 fs-28px text-body-emphasis">
                         <div class="px-xl-5 d-inline-block">
-                            <a class="lh-1 color-inherit text-decoration-none" href="#"
-                                data-bs-toggle="offcanvas" data-bs-target="#searchModal"
-                                aria-controls="searchModal" aria-expanded="false">
+                            <a class="lh-1 color-inherit text-decoration-none" href="#" data-bs-toggle="offcanvas"
+                                data-bs-target="#searchModal" aria-controls="searchModal" aria-expanded="false">
                                 <svg class="icon icon-magnifying-glass-light">
                                     <use xlink:href="#icon-magnifying-glass-light"></use>
                                 </svg>
@@ -167,7 +164,7 @@
                             <li
                                 class="nav-item transition-all-xl-1 py-xl-11 py-0 px-xxl-8 px-xl-6 dropdown dropdown-hover dropdown-fullwidth">
                                 <a class="nav-link d-flex justify-content-between position-relative py-xl-0 px-xl-0 text-uppercase fw-semibold ls-1 fs-15px fs-xl-14px "
-                                    href="{{route('client.home')}}" id="menu-item-home" aria-haspopup="true"
+                                    href="{{ route('client.home') }}" id="menu-item-home" aria-haspopup="true"
                                     aria-expanded="false">Trang chủ</a>
                                 {{-- <div class="dropdown-menu mega-menu start-0 py-6 "
                                     aria-labelledby="menu-item-home" style="width:320px">
@@ -294,31 +291,31 @@
                                                         <a href="shop/shop-layout-v1.html"
                                                             class="border-hover text-decoration-none py-3 d-block"><span
                                                                 class="border-hover-target">Whoo
-                                                                </span></a>
+                                                            </span></a>
                                                     </li>
                                                     <li>
                                                         <a href=""
                                                             class="border-hover text-decoration-none py-3 d-block"><span
                                                                 class="border-hover-target">Ohui
-                                                                </span></a>
+                                                            </span></a>
                                                     </li>
                                                     <li>
                                                         <a href="shop/shop-layout-v3.html"
                                                             class="border-hover text-decoration-none py-3 d-block"><span
                                                                 class="border-hover-target">Sum37
-                                                                </span></a>
+                                                            </span></a>
                                                     </li>
                                                     <li>
                                                         <a href="shop/shop-layout-v4.html"
                                                             class="border-hover text-decoration-none py-3 d-block"><span
                                                                 class="border-hover-target">Sulwhasoo
-                                                                </span></a>
+                                                            </span></a>
                                                     </li>
                                                     <li>
                                                         <a href="shop/shop-layout-v5.html"
                                                             class="border-hover text-decoration-none py-3 d-block"><span
                                                                 class="border-hover-target">Beyond
-                                                                </span></a>
+                                                            </span></a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -329,31 +326,31 @@
                                                         <a href="shop/product-details-v1.html"
                                                             class="border-hover text-decoration-none py-3 d-block"><span
                                                                 class="border-hover-target">Chăm sóc da mặt
-                                                                </span></a>
+                                                            </span></a>
                                                     </li>
                                                     <li>
                                                         <a href="shop/product-details-v2.html"
                                                             class="border-hover text-decoration-none py-3 d-block"><span
                                                                 class="border-hover-target">Chăm sóc cơ thể
-                                                                </span></a>
+                                                            </span></a>
                                                     </li>
                                                     <li>
                                                         <a href="shop/product-details-v3.html"
                                                             class="border-hover text-decoration-none py-3 d-block"><span
                                                                 class="border-hover-target">Chăm sóc tóc
-                                                                </span></a>
+                                                            </span></a>
                                                     </li>
                                                     <li>
                                                         <a href="shop/product-details-v4.html"
                                                             class="border-hover text-decoration-none py-3 d-block"><span
                                                                 class="border-hover-target">Trang điểm
-                                                                </span></a>
+                                                            </span></a>
                                                     </li>
                                                     <li>
                                                         <a href="shop/product-details-v4.html"
                                                             class="border-hover text-decoration-none py-3 d-block"><span
                                                                 class="border-hover-target">Phụ kiện
-                                                                </span></a>
+                                                            </span></a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -361,10 +358,10 @@
                                                 <h6 class="fs-18px">Sản phẩm</h6>
                                                 <ul class="list-unstyled mb-0">
                                                     <li>
-                                                        <a href="{{route('client.productpages.index')}}"
+                                                        <a href="{{ route('client.products.list') }}"
                                                             class="border-hover text-decoration-none py-3 d-block"><span
                                                                 class="border-hover-target">Toàn bộ sản phẩm
-                                                                </span></a>
+                                                            </span></a>
                                                     </li>
                                                     {{-- <li>
                                                         <a href="shop/product-variable.html"
@@ -390,7 +387,7 @@
                                                 <h6 class="fs-18px">Other Pages</h6>
                                                 <ul class="list-unstyled mb-0">
                                                     <li>
-                                                        <a href="shop/shopping-cart.html"
+                                                        <a href="{{route('cart.list')}}"
                                                             class="border-hover text-decoration-none py-3 d-block"><span
                                                                 class="border-hover-target">Shopping
                                                                 Cart</span></a>
@@ -427,8 +424,7 @@
                                                 <div class="card border-0 mt-4">
                                                     <img src="{{ asset('theme/assets/images/background/bg-mega-menu-shop.jpg') }}"
                                                         alt="bg mega menu" class="card-img">
-                                                    <div
-                                                        class="card-img-overlay d-flex flex-column mx-2 px-9 py-6">
+                                                    <div class="card-img-overlay d-flex flex-column mx-2 px-9 py-6">
                                                         <p
                                                             class="text-body-emphasis ls-1 fw-semibold mb-4 mt-6 text-uppercase">
                                                             new collection
@@ -453,8 +449,7 @@
                                     href="#" data-bs-toggle="dropdown" id="menu-item-pages"
                                     aria-haspopup="true" aria-expanded="false">Pages</a>
                                 <ul class="dropdown-menu py-6" aria-labelledby="menu-item-pages">
-                                    <li class="dropend dropdown-hover" aria-haspopup="true"
-                                        aria-expanded="false">
+                                    <li class="dropend dropdown-hover" aria-haspopup="true" aria-expanded="false">
                                         <a class="dropdown-item pe-6 dropdown-toggle d-flex justify-content-between border-hover"
                                             href="#" data-bs-toggle="dropdown" id="menu-item-blog">
                                             <span class="border-hover-target">
@@ -469,8 +464,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item border-hover"
-                                                    href="blog/grid-sidebar.html">
+                                                <a class="dropdown-item border-hover" href="blog/grid-sidebar.html">
                                                     <span class="border-hover-target">Blog Grid Sidebar</span>
                                                 </a>
                                             </li>
@@ -503,8 +497,7 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown-divider"></li>
-                                    <li class="dropend dropdown-hover" aria-haspopup="true"
-                                        aria-expanded="false">
+                                    <li class="dropend dropdown-hover" aria-haspopup="true" aria-expanded="false">
                                         <a class="dropdown-item pe-6 dropdown-toggle d-flex justify-content-between border-hover"
                                             href="#" data-bs-toggle="dropdown" id="menu-item-about-us">
                                             <span class="border-hover-target">
@@ -525,8 +518,7 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="dropend dropdown-hover" aria-haspopup="true"
-                                        aria-expanded="false">
+                                    <li class="dropend dropdown-hover" aria-haspopup="true" aria-expanded="false">
                                         <a class="dropdown-item pe-6 dropdown-toggle d-flex justify-content-between border-hover"
                                             href="#" data-bs-toggle="dropdown" id="menu-item-contact-us">
                                             <span class="border-hover-target">
@@ -547,10 +539,9 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="dropend dropdown-hover" aria-haspopup="true"
-                                        aria-expanded="false">
+                                    <li class="dropend dropdown-hover" aria-haspopup="true" aria-expanded="false">
                                         <a class="dropdown-item pe-6 dropdown-toggle d-flex justify-content-between border-hover"
-                                            href="dashboard/dashboard.html" data-bs-toggle="dropdown"
+                                            href="{{ route('admin.dashboard') }}" data-bs-toggle="dropdown"
                                             id="menu-item-dashboard">
                                             <span class="border-hover-target">
                                                 Dashboard
@@ -560,7 +551,7 @@
                                             data-bs-popper="none">
                                             <li>
                                                 <a class="dropdown-item border-hover"
-                                                    href="dashboard/dashboard.html">
+                                                    href="{{ route('admin.dashboard') }}">
                                                     <span class="border-hover-target">Dashboard</span>
                                                 </a>
                                             </li>
@@ -595,14 +586,12 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item border-hover"
-                                                    href="dashboard/reviews.html">
+                                                <a class="dropdown-item border-hover" href="dashboard/reviews.html">
                                                     <span class="border-hover-target">Reviews</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item border-hover"
-                                                    href="dashboard/brands.html">
+                                                <a class="dropdown-item border-hover" href="dashboard/brands.html">
                                                     <span class="border-hover-target">Brands</span>
                                                 </a>
                                             </li>
@@ -643,9 +632,8 @@
                         <a href="index.html" class="navbar-brand px-8 py-4 mx-auto">
                             <img class="light-mode-img" src="{{ asset('theme/assets/images/others/logo.png') }}"
                                 width="179" height="26" alt="Glowing - Bootstrap 5 HTML Templates">
-                            <img class="dark-mode-img"
-                                src="{{ asset('theme/assets/images/others/logo-white.png') }}" width="179"
-                                height="26" alt="Glowing - Bootstrap 5 HTML Templates"></a>
+                            <img class="dark-mode-img" src="{{ asset('theme/assets/images/others/logo-white.png') }}"
+                                width="179" height="26" alt="Glowing - Bootstrap 5 HTML Templates"></a>
                     </div>
                     <div class="w-auto w-xl-50 d-flex align-items-center">
                         <ul class="navbar-nav w-100 w-xl-auto">
@@ -654,8 +642,8 @@
                                 <a class="nav-link d-flex justify-content-between position-relative py-xl-0 px-xl-0 text-uppercase fw-semibold ls-1 fs-15px fs-xl-14px dropdown-toggle"
                                     href="#" data-bs-toggle="dropdown" id="menu-item-blocks"
                                     aria-haspopup="true" aria-expanded="false">Blocks</a>
-                                <div class="dropdown-menu mega-menu start-0 py-6 "
-                                    aria-labelledby="menu-item-blocks" style="width:800px">
+                                <div class="dropdown-menu mega-menu start-0 py-6 " aria-labelledby="menu-item-blocks"
+                                    style="width:800px">
                                     <div class="megamenu-home container py-8 px-12">
                                         <div class="row">
                                             <div class="col">
@@ -769,12 +757,10 @@
                                 <a class="nav-link d-flex justify-content-between position-relative py-xl-0 px-xl-0 text-uppercase fw-semibold ls-1 fs-15px fs-xl-14px dropdown-toggle"
                                     href="#" data-bs-toggle="dropdown" id="menu-item-docs"
                                     aria-haspopup="true" aria-expanded="false">Docs</a>
-                                <div class="dropdown-menu mega-menu start-0 py-6 "
-                                    aria-labelledby="menu-item-docs">
+                                <div class="dropdown-menu mega-menu start-0 py-6 " aria-labelledby="menu-item-docs">
                                     <div class="menumega-docs px-8" style="min-width: 250px">
                                         <a href="docs/usage/getting-started.html"
-                                            class="d-flex text-decoration-none mb-4 mb-lg-0"
-                                            title="Documentation">
+                                            class="d-flex text-decoration-none mb-4 mb-lg-0" title="Documentation">
                                             <div class="flex-shrink-0 fs-5 lh-1 text-muted pt-2">
                                                 <svg class="icon">
                                                     <use xlink:href="#book"></use>
@@ -829,15 +815,29 @@
                                 </div>
                             </li>
                         </ul>
+
                         <div
                             class="icons-actions d-none d-xl-flex justify-content-end ms-auto fs-28px text-body-emphasis">
-                            <div class="px-5 d-none d-xl-inline-block">
-                                <a class="lh-1 color-inherit text-decoration-none" href="#"
-                                    data-bs-toggle="modal" data-bs-target="#signInModal">
-                                    <svg class="icon icon-user-light">
-                                        <use xlink:href="#icon-user-light"></use>
-                                    </svg>
-                                </a>
+                            <div class="dropdown no-caret px-4 mx-3 py-2">
+                                @if (Route::has('client.login'))
+                                    <a class="lh-1 color-inherit text-decoration-none" href="##"
+                                        data-bs-toggle="dropdown">
+                                        <svg class="icon icon-user-light">
+                                            <use xlink:href="#icon-user-light"></use>
+                                        </svg>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        @auth
+                                            <a class="dropdown-item" href="{{ route('client.logout') }}">Logout</a>
+                                        @else
+                                            <a class="dropdown-item" href="{{ route('client.login') }}">Login</a>
+                                            @if (Route::has('client.register'))
+                                                <a class="dropdown-item"
+                                                    href="{{ route('client.register') }}">Register</a>
+                                            @endif
+                                        @endauth
+                                    </div>
+                                @endif
                             </div>
                             <div class="px-5 d-none d-xl-inline-block">
                                 <a class="position-relative lh-1 color-inherit text-decoration-none"
@@ -851,8 +851,8 @@
                                 </a>
                             </div>
                             <div class="px-5 d-none d-xl-inline-block">
-                                <a class="position-relative lh-1 color-inherit text-decoration-none"
-                                    href="#" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart"
+                                <a class="position-relative lh-1 color-inherit text-decoration-none" href="#"
+                                    data-bs-toggle="offcanvas" data-bs-target="#shoppingCart"
                                     aria-controls="shoppingCart" aria-expanded="false">
                                     <svg class="icon icon-star-light">
                                         <use xlink:href="#icon-shopping-bag-open-light"></use>
@@ -872,8 +872,7 @@
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end fs-14px" data-bs-popper="static">
                                     <li>
-                                        <button type="button"
-                                            class="dropdown-item d-flex align-items-center active"
+                                        <button type="button" class="dropdown-item d-flex align-items-center active"
                                             data-bs-theme-value="light" aria-pressed="true">
                                             <svg class="bi me-4 opacity-50 theme-icon">
                                                 <use href="#sun-fill"></use>

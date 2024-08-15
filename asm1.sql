@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jul 20, 2024 at 02:56 PM
+-- Generation Time: Aug 15, 2024 at 01:42 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -24,11 +24,72 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `banners`
+--
+
+CREATE TABLE `banners` (
+  `id` bigint UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image_path` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `start_date` date NOT NULL,
+  `end_date` date NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `banners`
+--
+
+INSERT INTO `banners` (`id`, `title`, `image_path`, `description`, `start_date`, `end_date`, `created_at`, `updated_at`) VALUES
+(1, 'Elna Fahey', '', 'In distinctio aut laborum et. Enim quia atque est enim vel eos. Corporis minima quas sunt.', '1994-05-31', '1990-07-22', '2024-08-02 22:07:53', '2024-08-02 22:07:53'),
+(2, 'Amelia Hegmann', '', 'Voluptatem aliquam blanditiis molestias sed provident. Quae ut aut voluptates quis id.', '2008-06-15', '1971-01-31', '2024-08-02 22:07:53', '2024-08-02 22:07:53'),
+(3, 'Cecile Hintz', '', 'Aut quasi corporis alias dolores. Iure quas ea iure rerum. Sint et reiciendis sunt dolorum ea.', '1977-11-25', '2011-02-23', '2024-08-02 22:07:53', '2024-08-02 22:07:53'),
+(4, 'Kelley Cole', '', 'Cupiditate facilis assumenda provident impedit dolorum. Omnis fuga non aut voluptatem quia.', '1970-10-29', '1972-01-26', '2024-08-02 22:07:53', '2024-08-02 22:07:53'),
+(5, 'Ms. Sonya Green I', '', 'Atque molestiae cum dolorum sed. Dolorem quia laborum minus. Voluptatem fugiat consequatur cumque.', '2023-05-23', '1974-03-11', '2024-08-02 22:07:53', '2024-08-02 22:07:53'),
+(6, 'Betty Ortiz', '', 'Culpa aut laboriosam iusto tempore. Unde sit neque consequatur sed fuga.', '2019-11-14', '2006-06-15', '2024-08-02 22:07:53', '2024-08-02 22:07:53'),
+(7, 'Katheryn Fadel', '', 'Quod nisi quo sit. Totam animi voluptas modi.', '2015-06-14', '2008-09-14', '2024-08-02 22:07:53', '2024-08-02 22:07:53'),
+(8, 'Eddie Bernhard', '', 'Mollitia quibusdam odit ad. Ut molestiae delectus ut aperiam ut similique illum.', '2006-12-13', '2018-07-11', '2024-08-02 22:07:53', '2024-08-02 22:07:53'),
+(9, 'Celia Sipes', '', 'Minus id dolor eum. Ut possimus qui suscipit. Qui fuga quae eaque suscipit.', '2024-01-19', '2007-01-24', '2024-08-02 22:07:53', '2024-08-02 22:07:53'),
+(10, 'Dr. Yadira Breitenberg I', '', 'Tenetur tenetur nihil aliquid est quia occaecati quis. Et eius impedit sapiente consequatur.', '1970-11-16', '2002-06-09', '2024-08-02 22:07:53', '2024-08-02 22:07:53'),
+(11, 'Destinee Bahringer II', '', 'Nostrum earum expedita fugit nihil. Rerum quisquam aut similique dolorem quis quo enim esse.', '1993-06-24', '1984-12-25', '2024-08-02 22:07:53', '2024-08-02 22:07:53'),
+(12, 'Miss Sadie Eichmann', '', 'Excepturi esse culpa ducimus unde. Omnis magni inventore enim aliquid.', '1975-07-19', '1985-07-28', '2024-08-02 22:07:53', '2024-08-02 22:07:53'),
+(13, 'Miss Sarah Cole', '', 'Eligendi optio labore voluptatibus temporibus. Deleniti esse illum dolores molestiae.', '2012-09-21', '2009-11-02', '2024-08-02 22:07:53', '2024-08-02 22:07:53'),
+(14, 'Mauricio Simonis', '', 'Accusantium illo dolores nihil porro perferendis quisquam libero. Modi nostrum quia nisi beatae et.', '2014-07-23', '2020-11-04', '2024-08-02 22:07:53', '2024-08-02 22:07:53'),
+(15, 'Dr. Felix Dickens Jr.', '', 'Aut quia voluptate asperiores. Saepe libero at ratione dolorem. Sunt sit quidem similique expedita.', '1992-06-13', '1978-11-14', '2024-08-02 22:07:53', '2024-08-02 22:07:53');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `carts`
 --
 
 CREATE TABLE `carts` (
   `id` bigint UNSIGNED NOT NULL,
+  `user_id` bigint UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `carts`
+--
+
+INSERT INTO `carts` (`id`, `user_id`, `created_at`, `updated_at`) VALUES
+(1, 1, '2024-08-01 09:56:14', '2024-08-01 09:56:14');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cart_items`
+--
+
+CREATE TABLE `cart_items` (
+  `id` bigint UNSIGNED NOT NULL,
+  `cart_id` bigint UNSIGNED NOT NULL,
+  `product_id` bigint UNSIGNED NOT NULL,
+  `quantity` int NOT NULL DEFAULT '0',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -57,11 +118,9 @@ INSERT INTO `categories` (`id`, `name`, `created_at`, `updated_at`) VALUES
 (5, 'Bette Cummings', '2024-07-16 03:55:15', '2024-07-16 03:55:15'),
 (6, 'Margot Jenkins', '2024-07-16 03:55:15', '2024-07-16 03:55:15'),
 (7, 'Jacques Schamberger II', '2024-07-16 03:55:15', '2024-07-16 03:55:15'),
-(8, 'Myah Kling PhD', '2024-07-16 03:55:15', '2024-07-16 03:55:15'),
 (9, 'Anastacio Wunsch MD', '2024-07-16 03:55:15', '2024-07-16 03:55:15'),
 (10, 'Mrs. Leta Walsh III', '2024-07-16 03:55:15', '2024-07-16 03:55:15'),
 (11, 'Alek Koch', '2024-07-16 04:11:10', '2024-07-16 04:11:10'),
-(12, 'Myrtis Harber', '2024-07-16 04:11:10', '2024-07-16 04:11:10'),
 (13, 'Chelsie Dietrich', '2024-07-16 04:11:10', '2024-07-16 04:11:10'),
 (14, 'Viola Lowe', '2024-07-16 04:11:10', '2024-07-16 04:11:10'),
 (15, 'Jessica Predovic', '2024-07-16 04:11:10', '2024-07-16 04:11:10'),
@@ -132,7 +191,73 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (5, '2024_07_16_081737_create_categories_table', 1),
 (6, '2024_07_18_090949_create_products_table', 2),
 (7, '2024_07_19_024517_create_product_pages_table', 3),
-(8, '2024_07_20_041151_create_carts_table', 4);
+(14, '2024_07_20_041151_create_carts_table', 4),
+(15, '2024_08_01_104811_create_cart_items_table', 4),
+(20, '2024_08_02_110211_create_orders_table', 5),
+(21, '2024_08_02_110221_create_order_items_table', 5),
+(22, '2024_08_02_150309_create_promotions_table', 6),
+(30, '2024_08_02_161444_create_promotions_table', 7),
+(31, '2024_08_02_165752_create_banners_table', 7),
+(32, '2024_08_03_020709_create_order_items_table', 7);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` bigint UNSIGNED NOT NULL,
+  `user_id` bigint UNSIGNED NOT NULL,
+  `user_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_address` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `order_status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'pending',
+  `payment_status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'unpaid',
+  `total_price` double(15,2) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `user_id`, `user_name`, `user_email`, `user_address`, `user_phone`, `order_status`, `payment_status`, `total_price`, `created_at`, `updated_at`) VALUES
+(59, 1, 'admin', 'tranvanquynh0224@gmail.com', 'Mê Linh-Hà Nội', '357869176', 'pending', 'unpaid', 8139478.00, '2024-08-02 23:13:18', '2024-08-02 23:13:18');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_items`
+--
+
+CREATE TABLE `order_items` (
+  `id` bigint UNSIGNED NOT NULL,
+  `order_id` bigint UNSIGNED NOT NULL,
+  `product_id` bigint UNSIGNED NOT NULL,
+  `product_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `product_image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `product_price` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `quantity` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `order_items`
+--
+
+INSERT INTO `order_items` (`id`, `order_id`, `product_id`, `product_name`, `product_image`, `product_price`, `quantity`, `created_at`, `updated_at`) VALUES
+(1, 59, 24, 'Ms. Alba Hahn Jr.', 'products/NtHOPk677qx4eRoQe9LelpufAh0XK4qEjARbGemx.jpg', '6999', '1', '2024-08-02 23:13:18', '2024-08-02 23:13:18'),
+(2, 59, 32, 'Prof. Yesenia Schuppe', 'products/6mE00ANwDpaGs01GYgpVcuQ2DeYv7q6cXX4CnUul.jpg', '899000', '8', '2024-08-02 23:13:18', '2024-08-02 23:13:18'),
+(3, 59, 20, 'Colton Rolfson', 'products/9DA90nxxnQ4QlGhL75gTugOuOWH2FIkbd1WTW1bn.jpg', '499', '1', '2024-08-02 23:13:18', '2024-08-02 23:13:18'),
+(4, 59, 2, 'Arden Legros', 'products/4YdjK6DLC3hARZNeZJ7TAP6qr14GxCxPpHKTWpn2.jpg', '100000', '1', '2024-08-02 23:13:18', '2024-08-02 23:13:18'),
+(5, 59, 24, 'Ms. Alba Hahn Jr.', 'products/NtHOPk677qx4eRoQe9LelpufAh0XK4qEjARbGemx.jpg', '6999', '20', '2024-08-02 23:13:18', '2024-08-02 23:13:18'),
+(6, 59, 2, 'Arden Legros', 'products/4YdjK6DLC3hARZNeZJ7TAP6qr14GxCxPpHKTWpn2.jpg', '100000', '4', '2024-08-02 23:13:18', '2024-08-02 23:13:18'),
+(7, 59, 18, 'Miss Jade Goodwin', 'products/RVw6qK4AfADtX6A3jXFSdXRNUhiohIVsLJqQsXMi.jpg', '100000', '2', '2024-08-02 23:13:18', '2024-08-02 23:13:18'),
+(8, 59, 2, 'Arden Legros', 'products/4YdjK6DLC3hARZNeZJ7TAP6qr14GxCxPpHKTWpn2.jpg', '100000', '1', '2024-08-02 23:13:18', '2024-08-02 23:13:18');
 
 -- --------------------------------------------------------
 
@@ -196,11 +321,6 @@ INSERT INTO `products` (`id`, `image`, `name`, `price`, `category_id`, `descript
 (8, 'products/pXyJ7sdqB2upZ7SMQeXfEcsRZea1H2pObNrpYuWK.jpg', 'Nayeli Fisher', 100000.00, 51, 'Est eligendi qui perspiciatis optio id velit. Odit minima veniam doloribus.', 185, '2024-07-18 02:55:49', '2024-07-18 09:56:52'),
 (9, 'products/UNpTcxWnc4ctKqfcoRF8R2T0rD2X1zOxSVnRjYcD.jpg', 'Breana Rogahn', 100000.00, 51, 'Cumque hic hic eius. Inventore eveniet eius praesentium ex voluptate in. Nemo nisi quas magnam.', 153, '2024-07-18 02:55:49', '2024-07-18 09:56:59'),
 (10, 'products/XNBux4NpnCYJpvQxjHBLW6ryrWb5Z4ro6ueU7abh.jpg', 'Krystel Turcotte', 100000.00, 51, 'Quibusdam voluptatum ut iure ratione. Repudiandae esse harum odit eum autem.', 127, '2024-07-18 02:55:49', '2024-07-18 09:57:07'),
-(11, 'products/IAvFc1kVQW0qZ0CQNOckndMoqXUcwGiWDWsJKzhY.jpg', 'Tad Mante', 100000.00, 51, 'Numquam et aut minus et. Dolorem consequuntur rerum iste et.', 128, '2024-07-18 02:55:49', '2024-07-18 09:57:15'),
-(12, 'products/p0AwcfaxcksM1ow9D6P47SYQA6THT69gl0m968kc.jpg', 'Jared Zieme IV', 100000.00, 51, 'Deleniti sed quidem et consequatur. Mollitia in similique eum et delectus aut enim quod.', 164, '2024-07-18 02:55:49', '2024-07-18 09:57:26'),
-(13, 'products/URosgckrcckofVcCtDlQ4zuF5GX37a2GoATFjr8y.jpg', 'Miss Therese White', 100000.00, 51, 'Repellat ut id dicta facere. Eum nam et aut amet perferendis sequi quo sit.', 120, '2024-07-18 02:55:49', '2024-07-18 09:57:37'),
-(14, 'products/J2KBZUbxzD2HpUdRmrqRz1mgSRq5nLKkJb6TKpTA.jpg', 'Eunice Kling', 100000.00, 9, 'Quis sint nihil optio vel soluta. Repudiandae sequi ut deserunt omnis aliquam quis.', 152, '2024-07-18 02:55:49', '2024-07-18 09:58:19'),
-(15, 'products/7ivezsjD4pstw6WTAlSTGbLSjb6cNm8ONnFA0AeI.jpg', 'Roosevelt Hudson', 100000.00, 39, 'Repudiandae eum voluptatem corporis impedit laborum et nemo. Quia error delectus sint aliquam.', 128, '2024-07-18 02:55:49', '2024-07-18 09:58:36'),
 (16, 'products/YtJaiT2Cs1kcqASGtOfXNupXHmH4waQf8PaHyUv0.jpg', 'Mckayla Larson', 100000.00, 27, 'Cupiditate non dolores quia error. Iste architecto ut placeat ratione.', 123, '2024-07-18 02:55:49', '2024-07-18 21:18:56'),
 (17, 'products/bXHV8WDoTBsObuSMXIcNCbbRWqK2UIrF7WtgWUyE.jpg', 'Martina Bode', 100000.00, 38, 'Unde quisquam velit nemo. Et ex libero eius sed. Velit omnis autem consequatur necessitatibus.', 159, '2024-07-18 02:55:49', '2024-07-18 21:19:14'),
 (18, 'products/RVw6qK4AfADtX6A3jXFSdXRNUhiohIVsLJqQsXMi.jpg', 'Miss Jade Goodwin', 100000.00, 51, 'Nobis nam vitae sit non ut. Dolorem esse tempora modi ex. Cupiditate voluptates mollitia et.', 152, '2024-07-18 02:55:49', '2024-07-18 21:19:56'),
@@ -235,6 +355,45 @@ CREATE TABLE `product_pages` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `promotions`
+--
+
+CREATE TABLE `promotions` (
+  `id` bigint UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `discount_amount` decimal(8,2) NOT NULL,
+  `start_date` date NOT NULL,
+  `end_date` date NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `promotions`
+--
+
+INSERT INTO `promotions` (`id`, `name`, `description`, `discount_amount`, `start_date`, `end_date`, `created_at`, `updated_at`) VALUES
+(1, 'Dana Dicki DVM', 'Et quidem facilis sunt qui nemo. Quod culpa maiores et aut corrupti qui.', '8.00', '2017-08-15', '2008-04-13', '2024-08-02 22:07:56', '2024-08-02 22:07:56'),
+(2, 'Osbaldo Torp', 'Quia id facere illum ipsam. Et quo eos dolor. Aperiam repellat ut ut corporis saepe.', '12.00', '1992-09-18', '2021-01-29', '2024-08-02 22:07:56', '2024-08-02 22:07:56'),
+(3, 'Prof. Nathen Kunze DVM', 'Commodi sint reiciendis sunt eos. Nam alias et et.', '9.00', '2010-08-07', '1978-06-13', '2024-08-02 22:07:56', '2024-08-02 22:07:56'),
+(4, 'Boris Feeney', 'Voluptas sed et expedita aliquam adipisci. Quia aliquid eos qui placeat temporibus.', '11.00', '1995-09-19', '1973-01-22', '2024-08-02 22:07:56', '2024-08-02 22:07:56'),
+(5, 'Marcus Flatley Jr.', 'Reiciendis molestias quisquam perferendis accusantium esse. Est officia culpa minus est aut.', '5.00', '1989-02-21', '1981-10-29', '2024-08-02 22:07:56', '2024-08-02 22:07:56'),
+(6, 'Diamond Lesch', 'Quia unde neque quae qui maiores illo. Eos autem perferendis ut delectus ducimus aliquid.', '10.00', '2002-11-11', '1973-10-31', '2024-08-02 22:07:56', '2024-08-02 22:07:56'),
+(7, 'Prof. Derrick Pacocha Sr.', 'In porro vitae harum. Eaque corporis cum ut reprehenderit. Et et qui nam inventore.', '13.00', '1986-04-22', '1972-07-04', '2024-08-02 22:07:56', '2024-08-02 22:07:56'),
+(8, 'Hailee Leuschke', 'Saepe eum sed ut perspiciatis. Veniam ipsa ea voluptatem.', '13.00', '1996-01-17', '1989-04-16', '2024-08-02 22:07:56', '2024-08-02 22:07:56'),
+(9, 'Zander Spinka', 'Eveniet ullam sed in et. Ad sunt ad sit architecto. Ut officiis consectetur voluptatum.', '10.00', '1999-10-25', '1981-12-23', '2024-08-02 22:07:56', '2024-08-02 22:07:56'),
+(10, 'Karine Fritsch', 'Alias at minima perferendis. Autem quasi numquam incidunt dolorum omnis.', '8.00', '2010-12-08', '1988-01-21', '2024-08-02 22:07:56', '2024-08-02 22:07:56'),
+(11, 'Rosemarie Cartwright', 'Adipisci velit labore eos sed velit dolor. Nihil sunt laudantium cum ab placeat.', '7.00', '2012-12-15', '2005-09-27', '2024-08-02 22:07:56', '2024-08-02 22:07:56'),
+(12, 'Frederique Bode I', 'Numquam veniam nam id vel. Sint laudantium error vel ex minus ipsum et.', '14.00', '1973-06-18', '2008-04-09', '2024-08-02 22:07:56', '2024-08-02 22:07:56'),
+(13, 'Ansley Watsica', 'Natus dolore quam sapiente. Alias facere culpa debitis eos voluptas sint corrupti.', '7.00', '1978-12-02', '2014-10-20', '2024-08-02 22:07:56', '2024-08-02 22:07:56'),
+(14, 'Lelia Kemmer', 'Corporis facilis est occaecati earum maxime. Expedita voluptatem sed omnis debitis vel.', '8.00', '1995-02-19', '1990-01-26', '2024-08-02 22:07:56', '2024-08-02 22:07:56'),
+(15, 'Raina Wuckert Jr.', 'Aut consequatur autem voluptates quaerat autem. Pariatur labore quis corrupti. Vero et autem ut.', '6.00', '2021-09-14', '1981-03-24', '2024-08-02 22:07:56', '2024-08-02 22:07:56'),
+(16, 'aa', 'ddddddd', '34342.00', '2024-08-03', '2024-08-10', '2024-08-02 23:09:25', '2024-08-02 23:09:25');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -246,18 +405,43 @@ CREATE TABLE `users` (
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `type` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'member'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `type`) VALUES
+(1, 'Trần Văn Quỳnh', 'tranvanquynh@gmail.com', NULL, '123456789', NULL, NULL, NULL, 'member'),
+(6, 'Trần quỳnh', 'tranvquyn@gmail.com', NULL, '$2y$12$I3lmMO20x1YoK0Ke3wqEBuHGQyLdnAhBAxcx0Y18IGXUBErycItF2', NULL, '2024-08-01 20:12:58', '2024-08-01 20:12:58', 'member'),
+(7, 'quinhquinh', 'quinhquinh222@gmail.com', NULL, '$2y$12$7PkYs6w9WlCIqJVlA6QRQuKAqvBKSHzs6cM57IbH.87cT4VEDcBei', NULL, '2024-08-02 02:46:14', '2024-08-02 02:46:14', 'member'),
+(8, 'Trần Văn Quỳnh', 'hangthptyl@gmail.com', NULL, '$2y$12$8eKoW3iTrrPwkQ4dZB6GI.sycR5ggjX9HN2SvJxC97J54b1Sux3aa', NULL, '2024-08-02 03:12:47', '2024-08-02 03:12:47', 'member');
 
 --
 -- Indexes for dumped tables
 --
 
 --
+-- Indexes for table `banners`
+--
+ALTER TABLE `banners`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `carts`
 --
 ALTER TABLE `carts`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cart_items`
+--
+ALTER TABLE `cart_items`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `cart_items_cart_id_foreign` (`cart_id`),
+  ADD KEY `cart_items_product_id_foreign` (`product_id`);
 
 --
 -- Indexes for table `categories`
@@ -277,6 +461,21 @@ ALTER TABLE `failed_jobs`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `orders_user_id_foreign` (`user_id`);
+
+--
+-- Indexes for table `order_items`
+--
+ALTER TABLE `order_items`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `order_items_order_id_foreign` (`order_id`),
+  ADD KEY `order_items_product_id_foreign` (`product_id`);
 
 --
 -- Indexes for table `password_reset_tokens`
@@ -306,6 +505,12 @@ ALTER TABLE `product_pages`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `promotions`
+--
+ALTER TABLE `promotions`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -317,10 +522,22 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `banners`
+--
+ALTER TABLE `banners`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
 -- AUTO_INCREMENT for table `carts`
 --
 ALTER TABLE `carts`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `cart_items`
+--
+ALTER TABLE `cart_items`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -338,7 +555,19 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+
+--
+-- AUTO_INCREMENT for table `order_items`
+--
+ALTER TABLE `order_items`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -359,14 +588,40 @@ ALTER TABLE `product_pages`
   MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `promotions`
+--
+ALTER TABLE `promotions`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `cart_items`
+--
+ALTER TABLE `cart_items`
+  ADD CONSTRAINT `cart_items_cart_id_foreign` FOREIGN KEY (`cart_id`) REFERENCES `carts` (`id`),
+  ADD CONSTRAINT `cart_items_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
+
+--
+-- Constraints for table `orders`
+--
+ALTER TABLE `orders`
+  ADD CONSTRAINT `orders_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Constraints for table `order_items`
+--
+ALTER TABLE `order_items`
+  ADD CONSTRAINT `order_items_order_id_foreign` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`),
+  ADD CONSTRAINT `order_items_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
 
 --
 -- Constraints for table `products`

@@ -130,33 +130,41 @@
                 </li>
 
                 <li class="list-group-item px-0 py-0 sidebar-item mb-3 has-children border-0">
-                    <a href="#order"
+                    <a href="{{ route('admin.promotions.index') }}"
                         class="text-heading text-decoration-none lh-1 d-flex sidebar-link align-items-center py-5 px-6 position-relative"
-                        data-bs-toggle="collapse" aria-expanded="false" title="Order">
+                        aria-expanded="false" title="Sanpham">
+                        <span class="sidebar-item-icon d-inline-block w-40px text-muted">
+                            <i class="fas fa-bullhorn"></i>
+                        </span>
+                        <span class="sidebar-item-text fs-14px fw-semibold">Khuyến mãi</span>
+                        <span class="position-absolute top-50 end-5 translate-middle-y"></i></span>
+                    </a>
+                </li>
+
+                <li class="list-group-item px-0 py-0 sidebar-item mb-3 has-children border-0">
+                    <a href="{{route('admin.banners.index')}}"
+                        class="text-heading text-decoration-none lh-1 d-flex sidebar-link align-items-center py-5 px-6 position-relative"
+                        aria-expanded="false" title="Sanpham">
+                        <span class="sidebar-item-icon d-inline-block w-40px text-muted">
+                            <i class="fas fa-image"></i>
+                        </span>
+                        <span class="sidebar-item-text fs-14px fw-semibold">Banner</span>
+                        <span class="position-absolute top-50 end-5 translate-middle-y"></i></span>
+                    </a>
+                </li>
+
+                <li class="list-group-item px-0 py-0 sidebar-item mb-3 has-children border-0">
+                    <a href="{{route('admin.orderItems.index')}}"
+                        class="text-heading text-decoration-none lh-1 d-flex sidebar-link align-items-center py-5 px-6 position-relative"
+                        aria-expanded="false" title="Sanpham">
                         <span class="sidebar-item-icon d-inline-block w-40px text-muted">
                             <i class="fas fa-shopping-cart"></i>
                         </span>
-                        <span class="sidebar-item-text fs-14px fw-semibold">Order</span>
-                        <span class="position-absolute top-50 end-5 translate-middle-y"><i
-                                class="far fa-angle-down"></i></span>
+                        <span class="sidebar-item-text fs-14px fw-semibold">Hóa đơn</span>
+                        <span class="position-absolute top-50 end-5 translate-middle-y"></i></span>
                     </a>
-                    <div class="collapse menu-collapse" id="order">
-                        <ul class="sub-menu list-unstyled">
-                            <li class="sidebar-item">
-                                <a class="sidebar-link pe-5 ps-8 py-5 lh-1 text-decoration-none fs-14px fw-semibold"
-                                    href="order-list.html" title="Order List 1">Order List 1</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a class="sidebar-link pe-5 ps-8 py-5 lh-1 text-decoration-none fs-14px fw-semibold"
-                                    href="order-list-2.html" title="Order List 2">Order List 2</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a class="sidebar-link pe-5 ps-8 py-5 lh-1 text-decoration-none fs-14px fw-semibold"
-                                    href="order-detail.html" title="Order detail">Order detail</a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
+
                 <li class="list-group-item px-0 py-0 sidebar-item mb-3 has-children border-0">
                     <a href="#sellers"
                         class="text-heading text-decoration-none lh-1 d-flex sidebar-link align-items-center py-5 px-6 position-relative"

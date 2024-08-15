@@ -1,8 +1,12 @@
 <?php
 
+use App\Http\Controllers\Admin\BannerController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\OrderItemController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\PromotionController;
+use App\Models\Banner;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +24,10 @@ Route::prefix('admin')->as('admin.')->group(function(){
     })->name('dashboard');
     Route::resource('categories', CategoryController::class);
     Route::resource('products', ProductController::class);
+    Route::resource('promotions', PromotionController::class);
+    Route::resource('banners', BannerController::class);
+    Route::resource('orderItems', OrderItemController::class);
+    
 
 });
-
 ?>

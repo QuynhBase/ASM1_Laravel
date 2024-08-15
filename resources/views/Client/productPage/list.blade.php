@@ -59,11 +59,11 @@
             <div class="row">
                 
                 <div class="col-lg-9 order-lg-1">
-                    <div class="row gy-11">@foreach ($data as $item) 
+                    <div class="row gy-11">@foreach ($products as $item) 
                         <div class="col-sm-6  col-lg-4 col-xl-3">
                             <div class="card card-product grid-2 bg-transparent border-0" data-animate="fadeInUp">
                                 <figure class="card-img-top position-relative mb-7 overflow-hidden">
-                                    <a href="{{route('client.productpages.show', $item->id)}}" class="hover-zoom-in d-block"
+                                    <a href="{{route('client.product.detail', $item->id)}}" class="hover-zoom-in d-block"
                                         title="Shield Conditioner">
                                         <img src="{{Storage::url($item->image)}}" data-src=""
                                             class="img-fluid lazy-image w-100" alt="Shield Conditioner" width="330"
@@ -106,7 +106,7 @@
                                         <ins class="text-decoration-none">{{$item->price}}</ins></span>
                                     <h4
                                         class="product-title card-title text-primary-hover text-body-emphasis fs-15px fw-500 mb-3">
-                                        <a class="text-decoration-none text-reset" href="{{route('client.productpages.show', $item->id)}}">{{$item->name}}</a></h4>
+                                        <a class="text-decoration-none text-reset" href="{{route('client.product.detail', $item->id)}}">{{$item->name}}</a></h4>
                                     <div class="d-flex align-items-center fs-12px justify-content-center">
                                         <div class="rating">
                                             <div class="empty-stars">
@@ -183,7 +183,7 @@
                                     </svg>
                                 </a>
                             </li> --}}
-                            {{$data->links()}}
+                            {{$products->links()}}
                             {{-- <li class="page-item">
                                 <a class="page-link rounded-circle d-flex align-items-center justify-content-center"
                                     href="#" aria-label="Next">
@@ -205,72 +205,12 @@
                                 <h4 class="widget-title fs-5 mb-6">Danh mục</h4>
                                 
                                 <ul class="navbar-nav navbar-nav-cate" id="widget_product_category">
-                                    @foreach ($category as $item)
+                                    @foreach ($products as $item)
                                     <li class="nav-item">
                                         <a href="#" title="Body Care"
                                             class="text-reset position-relative d-block text-decoration-none text-body-emphasis-hover d-flex align-items-center text-uppercase fs-14px fw-semibold letter-spacing-5"><span
-                                                class="text-hover-underline">{{$item->category->name}}</span></a>
+                                                class="text-hover-underline">{{$item->name}}</span></a>
                                     </li>
-                                    {{-- <li class="nav-item">
-                                        <a href="#" title="Skin care"
-                                            class="text-reset position-relative d-block text-decoration-none text-body-emphasis-hover d-flex align-items-center text-uppercase fs-14px fw-semibold letter-spacing-5 active">
-                                            <span class="text-hover-underline me-2">Chăm sóc da </span>
-                                            <span data-bs-toggle="collapse" data-bs-target="#cat_skin-care"
-                                                class="caret flex-grow-1 d-flex align-items-center justify-content-end collapsed"><svg
-                                                    class="icon">
-                                                    <use xlink:href="#icon-plus"></use>
-                                                </svg></span> </a>
-                                        <div id="cat_skin-care" class="collapse show"
-                                            data-bs-parent="#widget_product_category">
-                                            <ul class="navbar-nav nav-submenu ps-8">
-                                                <li class="nav-item">
-                                                    <a class="text-reset position-relative d-block text-decoration-none text-body-emphasis-hover d-flex align-items-center"
-                                                        href="#"><span
-                                                            class="text-hover-underline">Cleanser</span></a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="text-reset position-relative d-block text-decoration-none text-body-emphasis-hover d-flex align-items-center"
-                                                        href="#"><span
-                                                            class="text-hover-underline">Toner</span></a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="text-reset position-relative d-block text-decoration-none text-body-emphasis-hover d-flex align-items-center"
-                                                        href="#"><span class="text-hover-underline">Scrubs &amp;
-                                                            Masks</span></a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="text-reset position-relative d-block text-decoration-none text-body-emphasis-hover d-flex align-items-center"
-                                                        href="#"><span
-                                                            class="text-hover-underline">Serum</span></a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="text-reset position-relative d-block text-decoration-none text-body-emphasis-hover d-flex align-items-center"
-                                                        href="#"><span class="text-hover-underline">Face
-                                                            Oils</span></a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="text-reset position-relative d-block text-decoration-none text-body-emphasis-hover d-flex align-items-center"
-                                                        href="#"><span
-                                                            class="text-hover-underline">Moisturizer</span></a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="text-reset position-relative d-block text-decoration-none text-body-emphasis-hover d-flex align-items-center"
-                                                        href="#"><span class="text-hover-underline">Eye
-                                                            Cream</span></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" title="Hair Care"
-                                            class="text-reset position-relative d-block text-decoration-none text-body-emphasis-hover d-flex align-items-center text-uppercase fs-14px fw-semibold letter-spacing-5"><span
-                                                class="text-hover-underline">Chăm sóc tóc</span></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" title="Accessories"
-                                            class="text-reset position-relative d-block text-decoration-none text-body-emphasis-hover d-flex align-items-center text-uppercase fs-14px fw-semibold letter-spacing-5"><span
-                                                class="text-hover-underline">Phụ kiện</span></a>
-                                    </li> --}}
                                     @endforeach
                                 </ul>
                             </div>

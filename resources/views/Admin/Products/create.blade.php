@@ -11,7 +11,7 @@
     </div>
 
     <div class="col-sm-6 d-flex flex-wrap justify-content-sm-end">
-    <a href="{{route('admin.products.index')}}" class="btn btn-outline-primary me-4">Danh mục</a>
+    <a href="{{route('admin.products.index')}}" class="btn btn-outline-primary me-4">Danh sách</a>
     <button type="submit" class="btn btn-primary">Thêm mới</button>
     </div>
 
@@ -100,7 +100,7 @@
 
     <hr class="mb-7 mt-0">
 
-    <div class="row">
+    {{-- <div class="row">
     <div class="col-md-3">
     <h6 class="fs-6 fw-500">5. Số lượng</h6>
     </div>
@@ -110,7 +110,7 @@
     <input type="text" placeholder="Nhập số lượng" class="form-control" id="cost" name="quantity">
     </div>
     </div>
-    </div>
+    </div> --}}
 
     </form>
     </div>
